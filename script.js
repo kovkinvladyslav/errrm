@@ -1,7 +1,5 @@
 let jumpCount = 0; 
 let stardropClicked = false; 
-let bgMusic = document.getElementById("bg-music");
-bgMusic.play();
 
 
 function jumpStardrop() {
@@ -84,7 +82,9 @@ document.getElementById("stardrop").addEventListener("click", function(event) {
     let explosionVideo = document.getElementById("explosion-video");
     let valentineContainer = document.getElementById("valentine-container");
     let stardropText = document.getElementById("stardrop-text");
-
+    let bgMusic = document.getElementById("bg-music");
+    bgMusic.play();
+    
     explosionVideo.style.opacity = "1"; 
     explosionVideo.currentTime = 0;
     explosionVideo.play();
