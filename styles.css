@@ -1,0 +1,181 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background: url("resources/background.svg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+#stardrop {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  height: auto;
+  cursor: pointer;
+  filter: drop-shadow(0px 0px 25px rgba(255, 105, 180, 1));
+  transition: filter 0.2s ease-in-out;
+}
+
+#explosion-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  opacity: 0;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+#valentine-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  opacity: 0;
+  text-align: center;
+  z-index: 1000;
+  padding: 20px;
+  border-radius: 15px;
+  pointer-events: none;
+}
+
+#gif-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+#gif-left, #gif-right {
+  width: 220px;
+  height: auto;
+  border-radius: 20px;
+  animation: float 3s infinite alternate ease-in-out;
+}
+
+#valentine-text {
+  font-size: 36px;
+  font-weight: bold;
+  color: pink;
+  background: none;
+  padding: 10px 20px;
+  font-family: "Comic Sans MS", cursive;
+  text-shadow: 2px 2px 10px rgb(201, 60, 147);
+}
+
+#yes-button {
+  font-size: 24px;
+  font-weight: bold;
+  background: pink;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+#yes-button:hover {
+  background: hotpink;
+  transform: scale(1.1);
+}
+
+#second-screen {
+  display: none; /* Initially hidden */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  position: absolute;
+  top: 100vh;
+  width: 100vw;
+  height: 100vh;
+  background: url("resources/secondbackground.svg") no-repeat center center fixed;
+  background-size: cover;
+  overflow: hidden;
+}
+
+
+#heart-image {
+  width: 400px;
+  height: auto;
+  margin-top: 50px;
+}
+
+#final-text {
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  background: none;
+  text-shadow: 3px 3px 15px pink;
+  margin-top: 10px;
+  font-family: "Pacifico", cursive; 
+}
+
+#stardrop-text {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-family: "Comic Sans MS", cursive;
+  text-shadow: 2px 2px 10px pink;
+  animation: shake 2s infinite alternate ease-in-out;
+  transition: opacity 0.5s ease-in-out; 
+}
+
+@keyframes shake {
+  from { transform: translateX(-50%) rotate(-3deg); }
+  to { transform: translateX(-50%) rotate(3deg); }
+}
+#star-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10000; 
+}
+
+.star {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+
+#ps {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 10px pink;
+  font-family: "Comic Sans MS", cursive;
+  animation: blink 1.2s infinite alternate;
+  margin-top: 15px;
+}
+
+@keyframes blink {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.3;
+  }
+}
