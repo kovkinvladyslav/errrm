@@ -3,8 +3,15 @@ let stardropClicked = false;
 
 
 function jumpStardrop() {
-    let jumpHeight = jumpCount % 3 === 2 ? -25 : -15; 
-    let jumpDuration = 0.6 + Math.random() * 0.3; 
+    let jumpHeight;
+    let jumpDuration;
+    if (jumpCount % 3 === 2) {
+        jumpHeight = -45;
+        jumpDuration = 0.5 + Math.random() * 0.3; 
+    } else{
+        jumpDuration = 0.4 + Math.random() * 0.3; 
+        jumpHeight = -45;
+    }
 
     gsap.to("#stardrop", {
         y: jumpHeight,
@@ -22,7 +29,7 @@ function jumpStardrop() {
 
     if (jumpCount % 3 === 2) {
         gsap.to("#stardrop", {
-            rotationY: "+=180", 
+            rotationY: "+=360", 
             duration: jumpDuration,
             ease: "power1.inOut"
         });
